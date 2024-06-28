@@ -15,7 +15,7 @@ spec:
     parameters:
     - name: image
       type: "string"
-      default: "docker.io/jacobtan89/infinity:ai-core"
+      default: "docker.io/abirajesh/infinity:ai-core"
       description: "Define the location of the Docker image of which you have built for Infinity following the steps."
     - name: modelName
       type: "string"
@@ -55,7 +55,7 @@ spec:
     spec: |
       predictor:
         imagePullSecrets:
-        - name: jacob-docker-secret
+        - name: docker-secret
         minReplicas: {{inputs.parameters.minReplicas}}
         maxReplicas: {{inputs.parameters.maxReplicas}}
         containers:
